@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>facebook</title>
+
+    <!-- Linking css stylesheet to html page -->
+    <link rel="stylesheet" href="index.css">
+
+    <!-- Bootstrap and Jquery UI stylesheets -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+</head>
+<body>
+    <div class="navbar navbar-expand-lg dark-blue" style="height: 8vh; border-bottom: 1px solid black;">
+        <div class="container-fluid">
+            <div class="navbar-brand col-sm-2 centered">
+                <img src="facebook.png" height="70vh">
+            </div>
+            <div class="col-sm-4">
+
+            </div>
+            <div class="col-sm-4 w-100">
+                <div class="container">
+                    <div class="col-sm-4 borders p-0">
+                        <label for="email-input" class="white-text" style="display: block">Email or Phone</label>
+                        <input type="text" id="email-input" class="login-input w-100">
+                        <p class="no-m f-12 invisible-text">Forgotten account?</p>
+                    </div>
+                    <div class="col-sm-4 borders p-0">
+                        <label for="password-input" class="white-text" style="display: block">Password</label>
+                        <input type="password" class="login-input w-100" id="password-input">
+                        <p class="no-m f-12 text-muted"><a href="#" class="no-m f-12 text-muted">Forgotten account?</a></p>
+                    </div>
+
+                    <div class="col-sm-2 borders p-0">
+                        <label for="password-input" class="white-text invisible-text" style="display: block">Password</label>
+                        <button type="submit" class="login-btn w-100">Log In</button>
+                        <p class="no-m f-12 text-muted"><a href="#" class="no-m f-12 text-muted invisible-text">Forgotten</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+    </div>
+    <div id="fully-loaded">
+        <div class="container-fluid">
+            <div class=" container-fluid alert alert-danger alert-dismissible fade show" id="error" role="alert">
+                <p id="error-text"></p>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="container-fluid alert alert-success alert-dismissible fade show" id="success" role="alert">
+                <p id="success-text">Success: Your account has been created. Please wait while we send your personal data to a few people...</p>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="row">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-6 centered">
+                    <p class="f-50">Facebook helps you connect and share with the people in your life while discretely collecting sensitive personal user data.</p>
+                    <img src="facebook-connection.PNG" style="width: 100%;">
+                </div>
+    
+                <div class="col-sm-4">
+                    <div class="container px-2">
+                        <div class="w-100 mt-4">
+                            <h1 style="font-size: 3.2vw; font-weight: 700;">Create an Account</h1>
+                            <h3 style="font-size: 1.7vw;">Its free and always will be since we make money off selling your data to undisclosed companies</h3>
+                        </div>
+                        <form class="mt-5">
+                            <div class="row form-group">
+                              <div class="col">
+                                <input type="text" class="form-control" placeholder="First name">
+                              </div>
+                              <div class="col">
+                                <input type="text" class="form-control" placeholder="Surname">
+                              </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Mobile number or email address">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" placeholder="New Password">
+                            </div>
+                            <p class="mt-4 mb-1" style="font-size: 1.5vw;">Birthday</p>
+                            <div class="row px-3">
+                                <div class="col p-0" style="height:100px">
+                                    <input type="date">
+                                    <div class="container-fluid mt-3">
+                                        <div class="row">
+                                            <div class="col centered">
+                                                <input type="radio" id="female" name="gender" value="female">
+                                                <label for="female" style="font-size: 1.2vw;">Female</label><br>
+                                            </div>
+                                            <div class="col centered">
+                                                <input type="radio" id="male" name="gender" value="male">
+                                                <label style="font-size: 1.2vw;" for="male">Male</label><br>
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                </div>
+                                <div class="col p-0" style="height:100px">
+                                    <a id="birthday" href="#"><p class="p-text">Why do I need to provide my date of birth?</p></a>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <p style="font-size: 1vw;">By clicking Sign Up, you agree to our <a href="#">Terms</a>, <a href="#" class="data-privacy-btn">Data Policy</a> and <a href="#" class="cookie-policy">Cookie Policy</a>. You may receive SMS notifications from us and can opt out at any time.</p>
+                                <div id="checkbox-container">
+                                    <input type="radio" style="border-radius: 0; position: relative" id="movable" name="movable" value="movable">
+                                    <label for="movable" class="text-muted">opt out of unconsentual data mining </label><br>
+                                </div>
+                                <button id="sign-up-btn" class="w-50" style="background-color: #589e55; height: 5vh; border-radius: 8px; border: 2px solid #41683c">Sign Up</button>
+                            </div>
+    
+                            <p><a href="#">Create a Page</a> for a celebrity, band or business.</p>
+    
+                        </form>
+                    </div>
+    
+                </div>
+                <div class="col-sm-1"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Div -->
+    <div class="container" id="loading">
+        <div class="d-flex justify-content-center" style="margin-top: 20%;">
+            <span style="font-size: xx-large;">Please wait while we load our ads and data collectors...</span>
+            <div class="spinner-border text-dark" style="margin-top: 10px; margin-left: 5px" role="status"></div>
+        </div>
+    </div>
+    
+
+    <!-- Cookie Policy Modal -->
+    <div class="modal fade" id="cookie-policy-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header w-100 centered">
+              <h3 class="modal-title" id="exampleModalLabel">Cookie Policy</h3>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <h4>What are cookies?</h4>
+
+                <p>Cookies are simple text files that are stored on your computer or mobile device by a website’s server. Each cookie is unique to your web browser. It will contain some anonymous information such as a unique identifier, website’s domain name, and some digits and numbers.</p>
+                
+                <h4>What types of cookies do we use?</h4>
+                
+                <h5>Necessary cookies</h5>
+                
+                <p>Necessary cookies allow us to offer you the best possible experience when accessing and navigating through our website and using its features. For example, these cookies let us recognize that you have created an account and will allow us pull various bits of personal information from your account and store it on your local computer. This is very beneficial towards us and the user since we can now track you and your information across multiple sites to provide you with a better browsing experience.</p>
+                
+                <h5>Functionality cookies</h5>
+                
+                <p>Functionality cookies let us operate the site in accordance with the choices you make. For example, we will recognize your username and remember how you customized the site during future visits. This allows us to better understand user preferences and give ads that are more useful towards the user.</p>
+                
+                <h5>Analytical cookies</h5>
+                
+                <p>These cookies enable us and third-party services to collect aggregated data for statistical purposes on how our visitors use the website. These cookies do not contain personal information such as names and email addresses and are used to help us improve your user experience of the website.</p>
+                
+                <h4>How to delete cookies?</h4>
+                
+                <p>If you want to restrict or block the cookies that are set by our website, you can do so through your browser setting. Alternatively, you can visit <a href="https://www.internetcookies.org/">www.internetcookies.org</a>, which contains comprehensive information on how to do this on a wide variety of browsers and devices. You will find general information about cookies and details on how to delete cookies from your device.</p>
+                
+                <h4>Contacting us</h4>
+                
+                <p>If you have any questions about this cookie policy or our use of cookies, please contact us.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- Data Policy Modal -->
+    <div class="modal fade" id="data-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header w-100 centered">
+              <h3 class="modal-title" id="exampleModalLabel">Data Policy</h3>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <h5>Rules and Guidelines regarding data</h5>
+
+                <ol>
+                    <li>Facebook holds the right to collect user data by any means necessary</li>
+                    <li>Facebook holds the right to handle collected user data in any manner</li>
+                    <li>Any data that is collected from the user becomes private property of Facebook</li>
+                    <li>Facebook holds the right to sell, transfer, or give collected user data to any 3rd party firm</li>
+                </ol>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+
+
+
+        <div class="alert alert-danger alert-dismissible fade show container-fluid dark-blue" style="bottom:0px; position: fixed; display: none;" id="privacy-policy-container"role="alert">
+            <div class="input-group">
+                <p style="font-size: 30px; margin-right: 10px;">By clicking Accept you agree to our <a href="#" class="data-privacy-btn">Data Policy</a> and <a href="#"  class="cookie-policy">Cookie Policy</a></p>
+                <button id="accept-btn" class="btn btn-success mr-3">Accept</button>
+                <button id="decline-btn" class="btn btn-danger">Decline</button>
+            </div>
+          </div>
+
+    <!-- Bootstrap Javascript Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+
+    <!-- Custom JS Script -->
+    <script src="index.js"></script>
+</body>
+</html>
