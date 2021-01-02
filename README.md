@@ -16,7 +16,7 @@ you can access the website by going to http://ec2-3-129-148-71.us-east-2.compute
 
 if you want to download and access the site locally on your own computer the follow the following steps.
 
- 1. Clone the git repository onto your local machine
+ 1. Clone or download the git repository onto your local machine
  2. Open the index.html file on the web browser of choice.
 
 # Features
