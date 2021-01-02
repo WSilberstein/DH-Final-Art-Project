@@ -3,7 +3,7 @@ The website is meant to be a satirical approach to show users who brows the web 
 
 ![Old Facebook Login Page](facebook-old-img.png)
 
-***The website is not optimised for mobile devices and devices with smaller screens. If your screen size is too small, the webpage may not render perfectly. This is purely a visual problem and will not affect functionality explained in the features.** 
+***The website is not optimised for mobile devices and devices with smaller screens. If your screen size is too small, the webpage may not render perfectly. This is purely visual and will not affect functionality explained in the features.** 
 
 
 
